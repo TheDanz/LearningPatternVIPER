@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="LearningPatternVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQu-4W-kxM">
+                                <rect key="frame" x="142" y="408" width="130" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cvs-dk-NeZ"/>
+                                    <constraint firstAttribute="width" constant="130" id="vjc-3W-21o"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6p-YL-llL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HQu-4W-kxM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NHr-5X-aGm"/>
+                            <constraint firstItem="HQu-4W-kxM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QYe-Gi-HmS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="HQu-4W-kxM" id="Ju0-aV-cpx"/>
+                        <segue destination="LJm-XT-d9h" kind="presentation" identifier="LoginToHome" modalPresentationStyle="fullScreen" id="VwF-bx-mBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="82"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="GOj-lt-UZM">
+            <objects>
+                <viewController id="LJm-XT-d9h" customClass="HomeView" customModule="LearningPatternVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fph-l8-dOh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="HOa-oC-UTe">
+                                <rect key="frame" x="107" y="328" width="200" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sY-ja-cUp">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="V0c-ye-Ywk"/>
+                                            <constraint firstAttribute="height" constant="80" id="hIx-ln-s8H"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="showPhotoButtonClick:" destination="LJm-XT-d9h" eventType="touchUpInside" id="WSr-X7-4Ru"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE6-C8-6bK">
+                                        <rect key="frame" x="35" y="160" width="130" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="bBi-zy-6f6"/>
+                                            <constraint firstAttribute="width" constant="130" id="n8R-Jh-vSr"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="logoutButtonClick:" destination="LJm-XT-d9h" eventType="touchUpInside" id="nd9-L9-gVa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y60-ou-nPE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HOa-oC-UTe" firstAttribute="centerX" secondItem="Fph-l8-dOh" secondAttribute="centerX" id="c4p-Qe-yIM"/>
+                            <constraint firstItem="HOa-oC-UTe" firstAttribute="centerY" secondItem="Fph-l8-dOh" secondAttribute="centerY" id="fan-Ax-zUa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="sE6-C8-6bK" id="yhR-6d-F7e"/>
+                        <outlet property="showPhotoButton" destination="0sY-ja-cUp" id="rSz-9q-TAV"/>
+                        <segue destination="Yq3-3n-Hlz" kind="presentation" identifier="HomeToPhoto" modalPresentationStyle="fullScreen" id="8tr-SC-1Yc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZO-lm-Q0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="82"/>
+        </scene>
+        <!--Photo View-->
+        <scene sceneID="QXk-BB-5OG">
+            <objects>
+                <viewController id="Yq3-3n-Hlz" customClass="PhotoView" customModule="LearningPatternVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7c1-32-b62">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-v5-WRU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXD-r3-nkX">
+                                <rect key="frame" x="10" y="64" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IOe-4T-YvK"/>
+                                    <constraint firstAttribute="width" constant="100" id="V0B-4k-XHm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneClick:" destination="Yq3-3n-Hlz" eventType="touchUpInside" id="A4Y-OJ-3pi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3du-jy-0tz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TLq-v5-WRU" firstAttribute="top" secondItem="3du-jy-0tz" secondAttribute="top" id="6Xv-kj-4nE"/>
+                            <constraint firstItem="LXD-r3-nkX" firstAttribute="top" secondItem="3du-jy-0tz" secondAttribute="top" constant="20" id="8uE-CP-exK"/>
+                            <constraint firstItem="TLq-v5-WRU" firstAttribute="trailing" secondItem="3du-jy-0tz" secondAttribute="trailing" id="PWQ-G9-eLI"/>
+                            <constraint firstItem="TLq-v5-WRU" firstAttribute="leading" secondItem="3du-jy-0tz" secondAttribute="leading" id="T6O-mm-HIC"/>
+                            <constraint firstItem="TLq-v5-WRU" firstAttribute="bottom" secondItem="3du-jy-0tz" secondAttribute="bottom" id="f5W-gd-w0Z"/>
+                            <constraint firstItem="LXD-r3-nkX" firstAttribute="leading" secondItem="3du-jy-0tz" secondAttribute="leading" constant="10" id="lE3-lz-uGW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImage" destination="TLq-v5-WRU" id="qfb-VG-RB3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHI-cZ-IbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882.608695652174" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
